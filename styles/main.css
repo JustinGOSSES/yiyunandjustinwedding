@@ -429,6 +429,47 @@ a.button.invert {
   [class*="carousel"]:hover .owl-nav [class*='owl-'] {
     background-color: rgba(0, 0, 0, 0.3); }
 
+
+
+h1.noMaxWidth, h2.noMaxWidth, h3.noMaxWidth, h4.noMaxWidth, h5.noMaxWidth, h6.noMaxWidth {
+  max-width: 4000vw;
+ 
+  line-height: 1.8em; }
+
+
+h3.headline3b {
+  margin-top:0.7em;
+  margin-bottom:0.25em;
+}
+
+.blueButton {
+  background-color: #4169e1; /* blue */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin:0 auto;
+  margin-bottom: 4em;
+  max-width:40em;
+  display: block;
+  font-size: 16px;
+}
+.blueButton:hover {
+  color:white;
+}
+
+div#map.map {
+  margin-left:0.5em;
+  margin-right: 0.5em;
+}
+
+
+div.kiddieFrame{
+  width:80%;
+  margin:-6em auto;
+}
+
 /*   03 - END Carousel/slider using plugin owl-carousel  */
 /*   04 - General Section styling */
 section h2.main-heading {
@@ -666,7 +707,7 @@ section.welcome-screen {
         section.welcome-screen .column .welcome-text .footline:before, section.welcome-screen .column .welcome-text .footline:after {
           position: absolute;
           content: "";
-          border-bottom: 2px solid;
+          border-bottom: 0px solid;
           top: 11px;
           left: -20px;
           width: 60px; }
@@ -705,12 +746,23 @@ section.couple {
       width: 25%;
       float: left;
       margin-top: 80px; }
+    section.couple .picture-frame .people1, section.couple .picture-frame .people2b {
+      width: 25%;
+      float: left;
+      margin-top: 80px; 
+      margin-right:20%;}
       section.couple .picture-frame .people1 a, section.couple .picture-frame .people2 a {
         color: #999;
         font-size: 135%; }
     section.couple .picture-frame .people1 {
       text-align: right;
       margin-top: 160px; }
+    section.couple .picture-frame .people1b {
+      text-align: right;
+      width:25%;
+      margin-top: 80px;
+      margin-left:20%;
+      margin-right:5%; }
     section.couple .picture-frame .frame-wrapper {
       width: 50%;
       float: left;
