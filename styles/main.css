@@ -467,6 +467,7 @@ div#map.map {
 
 div.kiddieFrame{
   width:80%;
+  max-width:300px;
   margin:0 auto
   margin-top:0em;
 }
@@ -751,7 +752,7 @@ section.couple {
       width: 25%;
       float: left;
       margin-top: 40px; 
-      margin-right:20%;}
+      margin-right:22%;}
       section.couple .picture-frame .people1 a, section.couple .picture-frame .people2 a {
         color: #999;
         font-size: 135%; }
@@ -762,8 +763,9 @@ section.couple {
       text-align: right;
       width:25%;
       margin-top: 40px;
-      margin-left:20%;
+      margin-left:22%;
       margin-right:5%; }
+
     section.couple .picture-frame .frame-wrapper {
       width: 50%;
       float: left;
