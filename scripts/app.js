@@ -10,6 +10,12 @@ $hamburger.on("click", function(e) {
   $hamburger.toggleClass("is-active");
 });
 
+// // menu offcanvas trigger 
+// var $contents = $(".contents");
+// $contents.on("click", function(e) {
+//   $contents.toggleClass("is-active");
+// });
+
 // force welcome-screen section match window height.
 $height_window = $(window).height();
 $(".welcome-screen").height($height_window)
@@ -156,7 +162,7 @@ function initMap() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 16,
+        zoom: 9,
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(lat, lng), // Bali
 
@@ -176,6 +182,7 @@ function initMap() {
         },
         fullscreenControl: true,
         scrollwheel: false,
+        // mapTypeId: google.maps.MapTypeId.SATELLITE,
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
