@@ -4,6 +4,27 @@ $(document).ready(function() {
   $(document).foundation();
 });
 
+
+
+///////////////////// JUSTINS EDITS
+
+function showHideFunction() {
+  var x = document.getElementById("pdfFAQ");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+
+
+///////////////////// END JUSTINS EDITS
+
+
+
 // menu offcanvas trigger 
 var $hamburger = $(".hamburger");
 $hamburger.on("click", function(e) {
