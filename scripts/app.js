@@ -178,12 +178,13 @@ function initMap() {
     var mapElement = document.getElementById('map');
     var lat = mapElement.getAttribute("data-lat");
     var lng = mapElement.getAttribute("data-long");
+    var zoomFromHTML = mapElement.getAttribute("data-zoom")
     var titleMaps = mapElement.getAttribute("data-title");
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 9,
+        zoom: 13,
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(lat, lng), // Bali
 

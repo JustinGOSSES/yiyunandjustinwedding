@@ -459,6 +459,23 @@ h3.headline3b {
   color:white;
 }
 
+.lightblueButton {
+  background-color: #6aaef7; /* blue */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin:0 auto;
+  margin-bottom: 4em;
+  max-width:20em;
+  display: block;
+  font-size: 16px;
+}
+.lightblueButton:hover {
+  color:white;
+}
+
 div#map.map {
   margin-left:0.5em;
   margin-right: 0.5em;
