@@ -179,12 +179,15 @@ function initMap() {
     var lat = mapElement.getAttribute("data-lat");
     var lng = mapElement.getAttribute("data-long");
     var zoomFromHTML = mapElement.getAttribute("data-zoom")
+    var mapType = mapElement.getAttribute("data-maptype")
     var titleMaps = mapElement.getAttribute("data-title");
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+    console.log("test test",zoomFromHTML)
     var mapOptions = {
+        //console.log("what is zoomFromHTML:")
         // How zoomed in you want the map to start at (always required)
-        zoom: 13,
+        zoom: 12,
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(lat, lng), // Bali
 
@@ -204,11 +207,19 @@ function initMap() {
         },
         fullscreenControl: true,
         scrollwheel: false,
-        // mapTypeId: google.maps.MapTypeId.SATELLITE,
+        //
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
-        styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
+        //styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
       };
+    if (mapType == "sat"){
+      mapOptions.mapTypeId = google.maps.MapTypeId.SATELLITE
+    }
+    else{
+      mapOptions.mapTypeId = google.maps.MapTypeId.roadmaps
+    }
+    mapOptions.zoom = Number(zoomFromHTML)
     // Get the HTML DOM element that will contain your map 
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
